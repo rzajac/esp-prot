@@ -18,7 +18,6 @@
 #include <esp_i2c.h>
 #include <esp_sdo.h>
 #include <user_interface.h>
-#include <osapi.h>
 
 #define SCL GPIO0
 #define SDA GPIO2

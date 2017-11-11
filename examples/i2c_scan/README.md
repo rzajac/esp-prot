@@ -1,7 +1,6 @@
 ## I2C scan.
 
-Demonstrates how to:
-- Scan I2C bus for devices.
+Demonstrates how to scan I2C bus for devices.
 
 ## Flashing
 

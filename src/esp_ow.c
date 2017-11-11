@@ -224,7 +224,7 @@ search(uint8_t gpio_num, esp_ow_cmd sch_type, esp_ow_device *prev_search, uint8_
   // The bit complement read from the bus (0 - 1).
   bool bit_com;
   // The search direction.
-  bool sch_dir;
+  bool sch_dir = false;
   // The ROM address CRC8 value.
   uint8_t crc = 0;
   // Number of ones seen on the bus.
@@ -341,7 +341,7 @@ esp_ow_err ICACHE_FLASH_ATTR
 esp_ow_search(uint8_t gpio_num, esp_ow_cmd sch_type, esp_ow_device **root)
 {
   // The ROM address bit number where we encountered last discrepancy.
-  uint8_t last_disc;
+  uint8_t last_disc = 0;
   // Set to true by search function when last device ROM address is acquired.
   bool is_last_dev = false;
   // Search error code.

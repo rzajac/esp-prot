@@ -15,7 +15,7 @@
 
 find_package(esp_sdo REQUIRED)
 
-add_executable(ow_scan main.c ${ESP_USER_CONFIG})
-target_include_directories(ow_scan PUBLIC ${ESP_USER_CONFIG_DIR} ${esp_sdo_INCLUDE_DIRS})
-target_link_libraries(ow_scan ${esp_sdo_LIBRARIES} esp_ow)
-esp_gen_exec_targets(ow_scan)
+add_executable(ow_search main.c ${ESP_USER_CONFIG})
+target_include_directories(ow_search PUBLIC ${ESP_USER_CONFIG_DIR} ${esp_sdo_INCLUDE_DIRS})
+target_link_libraries(ow_search ${esp_sdo_LIBRARIES} esp_ow)
+esp_gen_exec_targets(ow_search)

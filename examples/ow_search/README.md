@@ -1,7 +1,6 @@
-## OneWire scan.
+## OneWire search.
 
-Demonstrates how to:
-- Scan OneWire bus for devices.
+Demonstrates how to search OneWire bus for devices.
 
 ## Flashing
 

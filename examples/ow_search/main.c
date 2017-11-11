@@ -17,7 +17,6 @@
 #include <esp_ow.h>
 #include <user_interface.h>
 #include <esp_gpio.h>
-#include <osapi.h>
 #include <esp_sdo.h>
 
 os_timer_t timer;

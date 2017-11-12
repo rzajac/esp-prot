@@ -28,7 +28,7 @@ This library depends on:
 to install dependency run:
 
 ```
-$ wget -O - https://raw.githubusercontent.com/rzajac/esp-ecl/master/install.sh | bash
+$ wget -O - https://raw.githubusercontent.com/rzajac/esp-prot/master/install.sh | bash
 ```
 
 ## License.

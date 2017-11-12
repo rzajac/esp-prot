@@ -2,11 +2,8 @@
 
 The collection of low level protocol drivers for ESP8266.
 
-- [I2C](src/include/esp_i2c.h)
-- [OneWire](src/include/esp_ow.h)
-
-For more details about the libraries check library header file where you will 
-find documentation for all the APIs.
+- [I2C](src/esp_i2c)
+- [Maxim OneWire](src/esp_ow)
 
 ## Build environment.
 

@@ -13,14 +13,18 @@
 # under the License.
 
 
-find_package(esp_sdo REQUIRED)
+project(esp_ow C)
 
-add_executable(i2c_scan main.c ${ESP_USER_CONFIG})
+find_package(esp_gpio REQUIRED)
 
-target_include_directories(i2c_scan PUBLIC
+add_library(esp_ow STATIC
+    esp_ow.c
+    include/esp_ow.h)
+
+target_include_directories(esp_ow PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
     ${ESP_USER_CONFIG_DIR}
-    ${esp_sdo_INCLUDE_DIRS})
+    ${esp_gpio_INCLUDE_DIRS})
 
-
-target_link_libraries(i2c_scan ${esp_sdo_LIBRARIES} esp_i2c)
-esp_gen_exec_targets(i2c_scan)
+esp_gen_lib(esp_ow ${ESP_CMAKE_FIND_DIR})

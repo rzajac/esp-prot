@@ -19,6 +19,7 @@
 #include <esp_sdo.h>
 #include <user_interface.h>
 
+
 #define SCL GPIO0
 #define SDA GPIO2
 

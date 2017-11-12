@@ -2,7 +2,7 @@
 
 Demonstrates how to search OneWire bus for devices.
 
-## Flashing
+## Flashing.
 
 ```
 $ cd build

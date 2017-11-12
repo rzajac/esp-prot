@@ -14,8 +14,10 @@
  * under the License.
  */
 
+
 #include <esp_i2c.h>
 #include <mem.h>
+
 
 // Set to true when I2C is initialized.
 static bool init;

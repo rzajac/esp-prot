@@ -2,7 +2,7 @@
 
 Demonstrates how to scan I2C bus for devices.
 
-## Flashing
+## Flashing.
 
 ```
 $ cd build

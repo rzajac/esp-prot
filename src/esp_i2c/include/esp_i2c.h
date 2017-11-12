@@ -14,11 +14,13 @@
  * under the License.
  */
 
+
 #ifndef ESP_I2C_H
 #define ESP_I2C_H
 
 #include <c_types.h>
 #include <esp_gpio.h>
+
 
 #define ESP_I2C_ACK false
 #define ESP_I2C_NACK true

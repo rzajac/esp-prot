@@ -454,6 +454,11 @@ esp_ow_dump_found(esp_ow_device *root)
 {
   esp_ow_device *curr;
 
+  if (root == NULL) {
+    os_printf("No OneWire devices found.\n");
+    return;
+  }
+
   curr = root;
   while (curr != NULL) {
     os_printf("Found ROM: ");

@@ -27,4 +27,4 @@ target_include_directories(esp_i2c PUBLIC
     ${ESP_USER_CONFIG_DIR}
     ${esp_gpio_INCLUDE_DIRS})
 
-esp_gen_lib(esp_i2c ${ESP_CMAKE_FIND_DIR})
+esp_gen_lib(esp_i2c)

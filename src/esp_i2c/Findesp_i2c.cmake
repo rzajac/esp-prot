@@ -32,7 +32,12 @@ find_library(esp_i2c_LIBRARY NAMES esp_i2c)
 find_package(esp_gpio REQUIRED)
 
 include(FindPackageHandleStandardArgs)
-FIND_PACKAGE_HANDLE_STANDARD_ARGS(esp_i2c DEFAULT_MSG esp_i2c_LIBRARY esp_i2c_INCLUDE_DIR)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(esp_i2c
+    DEFAULT_MSG
+    esp_i2c_LIBRARY
+    esp_i2c_INCLUDE_DIR
+    esp_gpio_INCLUDE_DIRS
+    esp_gpio_LIBRARIES)
 
 set(esp_i2c_INCLUDE_DIRS ${esp_i2c_INCLUDE_DIR} ${esp_gpio_INCLUDE_DIRS})
 set(esp_i2c_LIBRARIES ${esp_i2c_LIBRARY} ${esp_gpio_LIBRARIES})

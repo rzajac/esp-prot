@@ -32,7 +32,12 @@ find_library(esp_ow_LIBRARY NAMES esp_ow)
 find_package(esp_gpio REQUIRED)
 
 include(FindPackageHandleStandardArgs)
-FIND_PACKAGE_HANDLE_STANDARD_ARGS(esp_ow DEFAULT_MSG esp_ow_LIBRARY esp_ow_INCLUDE_DIR)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(esp_ow 
+    DEFAULT_MSG 
+    esp_ow_LIBRARY 
+    esp_ow_INCLUDE_DIR
+    esp_gpio_INCLUDE_DIRS
+    esp_gpio_LIBRARIES)
 
 set(esp_ow_INCLUDE_DIRS ${esp_ow_INCLUDE_DIR} ${esp_gpio_INCLUDE_DIRS})
 set(esp_ow_LIBRARIES ${esp_ow_LIBRARY} ${esp_gpio_LIBRARIES})

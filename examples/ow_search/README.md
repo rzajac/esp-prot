@@ -7,6 +7,6 @@ Demonstrates how to search OneWire bus for devices.
 ```
 $ cd build
 $ cmake ..
-$ make ow_scan_flash
+$ make ow_scan_ex_flash
 $ miniterm.py /dev/ttyUSB0 74880
 ```

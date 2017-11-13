@@ -15,12 +15,11 @@
 
 find_package(esp_sdo REQUIRED)
 
-add_executable(i2c_scan main.c ${ESP_USER_CONFIG})
+add_executable(i2c_scan_ex main.c ${ESP_USER_CONFIG})
 
-target_include_directories(i2c_scan PUBLIC
+target_include_directories(i2c_scan_ex PUBLIC
     ${ESP_USER_CONFIG_DIR}
     ${esp_sdo_INCLUDE_DIRS})
 
-
-target_link_libraries(i2c_scan ${esp_sdo_LIBRARIES} esp_i2c)
-esp_gen_exec_targets(i2c_scan)
+target_link_libraries(i2c_scan_ex ${esp_sdo_LIBRARIES} esp_i2c)
+esp_gen_exec_targets(i2c_scan_ex)

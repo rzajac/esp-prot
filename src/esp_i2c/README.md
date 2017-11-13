@@ -12,11 +12,12 @@ Library is able to communicate with four speeds 100k 200k 300k and 400k. By
 default 100k speed is used but you can change it at any time with 
 `esp_i2c_set_speed` function.
 
-Library also provides `esp_i2c_scan` function to scan for I2C devices 
+The `esp_i2c_scan` function is provided to scan for I2C devices 
 on the bus. The scan result is a linked list of `esp_i2c_dev` structures which 
 can be used by your driver to identify device in your code. 
 
 It is user responsibility to release memory associated with the list. For 
 convenience library provides `esp_i2c_free_device_list`.
 
-For more information see [esp_i2c.h](include/esp_i2c.h) header file.
+See [example program](../../examples/i2c_scan) and library documentation in 
+[esp_i2c.h](include/esp_i2c.h) header file for more details.

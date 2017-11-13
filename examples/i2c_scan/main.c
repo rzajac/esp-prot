@@ -19,11 +19,11 @@
 #include <esp_sdo.h>
 #include <user_interface.h>
 
-
 #define SCL GPIO0
 #define SDA GPIO2
 
 os_timer_t timer;
+
 
 /** Scan I2C bus for devices. */
 static void ICACHE_FLASH_ATTR

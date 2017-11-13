@@ -17,7 +17,6 @@
 
 #include <esp_ow.h>
 #include <esp_gpio.h>
-#include <osapi.h>
 #include <mem.h>
 
 
@@ -317,6 +316,17 @@ search(uint8_t gpio_num, esp_ow_cmd sch_type, esp_ow_device *prev_search, uint8_
   return ESP_OW_ERR;
 }
 
+esp_ow_device *ICACHE_FLASH_ATTR
+esp_ow_new_dev(uint8_t *rom)
+{
+  esp_ow_device *device = os_zalloc(sizeof(esp_ow_device));
+  if (device == NULL) return NULL;
+
+  os_memcpy(device->rom, rom, (8 * sizeof(uint8_t)));
+
+  return device;
+}
+
 /**
  * Create device node based on previous node.
  *
@@ -329,10 +339,9 @@ search(uint8_t gpio_num, esp_ow_cmd sch_type, esp_ow_device *prev_search, uint8_
 static esp_ow_device *ICACHE_FLASH_ATTR
 add_device(esp_ow_device *prev_node)
 {
-  esp_ow_device *new_node = os_zalloc(sizeof(esp_ow_device));
+  esp_ow_device *new_node = esp_ow_new_dev(prev_node->rom);
   if (new_node == NULL) return NULL;
 
-  os_memcpy(new_node->rom, prev_node->rom, (8 * sizeof(uint8_t)));
   new_node->gpio_num = prev_node->gpio_num;
   prev_node->next = new_node;
 

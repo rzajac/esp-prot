@@ -7,6 +7,6 @@ Demonstrates how to scan I2C bus for devices.
 ```
 $ cd build
 $ cmake ..
-$ make i2c_scan_flash
+$ make i2c_scan_ex_flash
 $ miniterm.py /dev/ttyUSB0 74880
 ```

@@ -14,6 +14,7 @@
  * under the License.
  */
 
+
 #ifndef ESP_ONE_WIRE_H
 #define ESP_ONE_WIRE_H
 
@@ -54,6 +55,7 @@ typedef enum {
   ESP_OW_ERR_PIN_FLAPPING,
 } esp_ow_err;
 
+
 /**
  * Initialize OneWire bus.
  *
@@ -74,6 +76,16 @@ esp_ow_init(uint8_t gpio_num);
  */
 esp_ow_err ICACHE_FLASH_ATTR
 esp_ow_search(uint8_t gpio_num, esp_ow_cmd sch_type, esp_ow_device **root);
+
+/**
+ * Construct new device with given ROM address.
+ *
+ * @param rom The pointer to 8 byte ROM address.
+ *
+ * @return The device or NULL on error
+ */
+esp_ow_device *ICACHE_FLASH_ATTR
+esp_ow_new_dev(uint8_t *rom);
 
 /**
  * Find deices on the OneWire bus matching family code.

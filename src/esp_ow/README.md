@@ -27,4 +27,8 @@ Function                  | Description
 `esp_ow_free_device_list` | Release memory allocated for the list.
 `esp_ow_dump_found`       | Dump all devices to serial. 
 
-For more information see [esp_ow.h](include/esp_ow.h) header file.
+If you already know your device's ROM address you can create it with 
+`esp_ow_new_dev` function.
+
+See [example program](../../examples/ow_search) and library documentation in 
+[esp_ow.h](include/esp_ow.h) header file for more details.
